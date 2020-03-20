@@ -62,6 +62,7 @@ height: auto !important;
             <th scope="col">Telefono</th>
             <th scope="col">Nombre</th>
             <th scope="col">Email</th>
+            <th scope="col">Detalle</th>
             </tr>
         </thead>
         <tbody>
@@ -75,6 +76,8 @@ height: auto !important;
             <td><?php echo $value->ad_contact_phone; ?></td>
             <td><?php echo $value->ad_contact_name; ?></td>
             <td><?php echo $value->ad_contact_email; ?></td>
+            <td><?php echo $value->ad_title; ?></td>
+            
             </tr>
         <?php 
         endforeach;
