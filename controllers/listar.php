@@ -47,7 +47,7 @@ height: auto !important;
     <div class="row">
     <div class="col-md-12">
         <hr>    
-        <h3>Resultados para la categoria: <strong><i><?php echo $categoria["category_name"]; ?></i></strong></h3>
+        <h3>Resultados para la categoria: <strong><i><?php echo $categoria->category_name; ?></i></strong></h3>
         <hr>
     </div>
     </div>
