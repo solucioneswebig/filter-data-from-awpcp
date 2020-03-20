@@ -3,11 +3,11 @@
 
 
         if($(window).width() < 768){
-        $('#tabla-empleados').DataTable( {
+        $('.table').DataTable( {
            responsive: true
         } );            
         }else{
-         $('#tabla-empleados').DataTable();                  
+         $('.table').DataTable();                  
         }
 
 
