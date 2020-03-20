@@ -42,7 +42,7 @@ height: auto !important;
             
         </form>
 
-        <p>By <a href="https://solucioneswebig.com">solucioneswebig.com</a></p>        
+        <p>By <a href="https://solucioneswebig.com" target="_blank">solucioneswebig.com</a></p>        
         </div>
     </div>
 </div>
