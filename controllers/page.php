@@ -5,6 +5,16 @@ global $wpdb;
 
 ?>
 
+<style>
+.wp-admin select {
+
+padding: 2px;
+line-height: auto !important;
+height: auto !important;
+
+}
+</style>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
