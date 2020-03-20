@@ -14,7 +14,7 @@ $obtener_categorias = $wpdb->get_results("SELECT * FROM wp_awpcp_categories");
 foreach($obtener_categorias as $key => $value):
 ?>
 
-<option value="<?php echo $value->category_id; ?>"><?php echo $value->category_name; ?></option>
+<option value="?page=gestionar-datos-awpcp&<?php echo $value->category_id; ?>"><?php echo $value->category_name; ?></option>
 
 <?php endforeach; ?>
 
