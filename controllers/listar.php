@@ -3,11 +3,46 @@
 global $wpdb;
 
 $obtener_datos = $wpdb->get_results("SELECT * FROM wp_awpcp_ads where ad_category_id = ".$_GET['id_mostrar']."");
-
+$categoria = $wpdb->get_row("SELECT * FROM wp_awpcp_categories where category_name = ".$_GET['id_mostrar']."");
 ?>
 
 
 <div class="container">
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+
+    <form action="admin.php" style="margin-top: 20%;">
+
+        <input type="hidden" name="page" value="gestionar-datos-awpcp">
+        <h3>Seleccionar categoria a filtrar</h3>
+        <div class="input-group mb-3">
+        <select name="id_mostrar" class="form-control" id="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <?php 
+        $obtener_categorias = $wpdb->get_results("SELECT * FROM wp_awpcp_categories");
+        foreach($obtener_categorias as $key => $value):
+        ?>
+
+        <option value="<?php echo $value->category_id; ?>"><?php echo $value->category_name; ?></option>
+
+        <?php endforeach; ?>
+
+        </select>
+        <div class="input-group-prepend">
+            <button type="submit" class="btn btn-success" id="button-addon1">Buscar resultados</button>
+        </div>
+        </div>
+    </form>  
+
+    </div>
+</div>
+    <div class="row">
+    <div class="col-md-12">
+        <hr>    
+        <h3>Resultados para la categoria: <strong><i><?php echo $categoria["category_name"]; ?></i></strong></h3>
+        <hr>
+    </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-12">
 

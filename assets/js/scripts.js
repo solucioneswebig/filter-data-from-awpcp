@@ -4,10 +4,19 @@
 
         if($(window).width() < 768){
         $('.table').DataTable( {
-           responsive: true
+           responsive: true,
+           dom: 'Bfrtip',
+           buttons: [
+               'copy', 'csv', 'excel', 'pdf', 'print'
+           ]
         } );            
         }else{
-         $('.table').DataTable();                  
+         $('.table').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+         });                  
         }
 
 
