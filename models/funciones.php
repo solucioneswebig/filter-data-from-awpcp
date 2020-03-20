@@ -8,17 +8,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Register a custom menu page.
  */
-function wpdocs_register_my_custom_menu_page() {
-    add_menu_page(
-        __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
-        __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
-        'manage_options',
-        'cargar-page-dashboard',
-        'admin_menu_gestion_awpcp',
-        'dashicons-camera',
-        6
-    );
+
+function admin_menu_galeria() {
+
+    add_menu_page ( __('Simple Gallery','swb_simple_gallery'), __('Simple Gallery','swb_simple_gallery'), 
+    'manage_options', 'gestion-datos-awpcp', 'admin_menu_gestion_awpcp', 'dashicons-camera', 9 );
+ 
+	// add_submenu_page ( 'admin_menu_plugin', 'Galeria', 'Galeria', 'manage_options', 'menu_galeria', 'listado_galeria' );
+ 
 }
+add_action('admin_menu', 'admin_menu_galeria');
 
 /**
  * Display a custom menu page
