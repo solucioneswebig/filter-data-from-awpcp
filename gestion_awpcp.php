@@ -65,6 +65,8 @@ function design_styles(){
 
 	wp_enqueue_style( 'mtb-style-general', GN_PLUGIN_DIR_URL . 'assets/css/style.css', false );
 
+	wp_enqueue_style( 'mtb-bootstrap-general', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', false );
+
 	wp_enqueue_style( 'datatable-public-css','//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css', false );
 
 	wp_enqueue_style( 'datatable-public-responsive-css','https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css', false );
@@ -97,7 +99,7 @@ function design_styles(){
 
 }
 
-add_action('wp_enqueue_scripts', 'design_styles');
+add_action('admin_head', 'design_styles');
 
 
 
