@@ -94,7 +94,7 @@ function design_styles(){
 	wp_enqueue_script( 'sweet-alert','https://cdn.jsdelivr.net/npm/sweetalert2@8', array('jquery'), null, true );
 
 
-	wp_enqueue_script( 'mtb-scripts-general', GN_PLUGIN_DIR_URL . 'assets/js/scripts.js' , array( 'jquery' ), null , true );
+	wp_enqueue_script( 'scriot-gdsw-general', GN_PLUGIN_DIR_URL . 'assets/js/scripts.js' , array( 'jquery' ), null , true );
 	
 
 }
@@ -119,7 +119,28 @@ function dropzonejs_upload() {
 	include "ajax/subirDocumentos.ajax.php";
 }
 
+?>
 
+<script>
+(function($) {
+    $(document).ready(function() {
+
+
+        if($(window).width() < 768){
+        $('.table').DataTable( {
+           responsive: true
+        } );            
+        }else{
+         $('.table').DataTable();                  
+        }
+
+
+    });
+})(jQuery);
+
+</script>
+
+<?php
 
 
 /*Incluimos la carpeta de models*/
@@ -134,7 +155,6 @@ include GN_PLUGIN_DIR_PATH . "controllers/index.php";
 /*Incluimos la carpeta de views*/
 
 include GN_PLUGIN_DIR_PATH . "views/index.php";
-
 
 
 
