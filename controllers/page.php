@@ -9,10 +9,14 @@ global $wpdb;
     <div class="row justify-content-center">
         <div class="col-md-6">
         
-        <form action="admin.php">
+        <form action="admin.php" style="margin-top: 20%;">
 
             <input type="hidden" name="page" value="gestionar-datos-awpcp">
-            <div class="input-group">
+            <h3>Seleccionar categoria a filtrar</h3>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button type="submit" class="btn btn-success">Buscar resultados</button>
+            </div>
             <select name="id_mostrar" class="form-control" id="">
             <?php 
             $obtener_categorias = $wpdb->get_results("SELECT * FROM wp_awpcp_categories");
@@ -24,9 +28,6 @@ global $wpdb;
             <?php endforeach; ?>
 
             </select>
-
-
-            <button type="submit" class="btn btn-success">Buscar resultados</button>
             </div>
         </form>        
         </div>
