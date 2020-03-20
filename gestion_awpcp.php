@@ -63,6 +63,8 @@ define('PLUGIN_BASE_DIR', dirname(__FILE__));
 
 function design_styles(){
 
+	if(isset($_GET['page']) && $_GET["page"] == "gestionar-datos-awpcp"):
+
 	wp_enqueue_style( 'mtb-style-general', GN_PLUGIN_DIR_URL . 'assets/css/style.css', false );
 
 	wp_enqueue_style( 'mtb-bootstrap-general', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', false );
@@ -96,6 +98,7 @@ function design_styles(){
 
 	wp_enqueue_script( 'scriot-gdsw-general', GN_PLUGIN_DIR_URL . 'assets/js/scripts.js' , array( 'jquery' ), null , true );
 	
+	endif;
 
 }
 
