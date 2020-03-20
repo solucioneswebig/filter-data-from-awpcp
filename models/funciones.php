@@ -8,16 +8,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Register a custom menu page.
  */
-function wpdocs_register_my_custom_menu_page() {
-    add_menu_page(
-        __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
-        __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
-        'manage_options',
-        'cargar-page-dashboard',
-        'admin_menu_gestion_awpcp',
-        'dashicons-admin-page',
-        6
-    );
+function admin_menu_galeria() {
+
+    add_menu_page ( __('GESTIONAR DATOS AWPCP','swb_simple_gallery'), __('GESTIONAR DATOS AWPCP','swb_simple_gallery'), 'manage_options',
+     'gestionar-datos-awpcp', 
+     'admin_menu_gestion_awpcp', 
+     'dashicons-admin-page', 9 );
+ 
+	// add_submenu_page ( 'admin_menu_plugin', 'Galeria', 'Galeria', 'manage_options', 'menu_galeria', 'listado_galeria' );
+ 
 }
 
 /**
@@ -29,4 +28,15 @@ function admin_menu_gestion_awpcp() {
     }else{
       include GN_PLUGIN_DIR_PATH . "controllers/page.php";
     }
+  }
+
+
+
+add_action('admin_menu', 'admin_menu_galeria');
+
+add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
+
+
+function cargar_page_dashboard(){
+    
 }
