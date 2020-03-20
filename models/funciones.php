@@ -25,10 +25,12 @@ function admin_menu_galeria() {
 function admin_menu_gestion_awpcp() {
     if (!current_user_can('manage_options'))  {
       wp_die( __('No tienes suficientes permisos para acceder a esta página.') );
+    }elseif(isset($_GET['id_mostrar'])){
+        include GN_PLUGIN_DIR_PATH . "controllers/listar.php";
     }else{
-      include GN_PLUGIN_DIR_PATH . "controllers/page.php";
+    include GN_PLUGIN_DIR_PATH . "controllers/page.php";
     }
-  }
+}
 
 
 
