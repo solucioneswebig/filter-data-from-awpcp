@@ -58,11 +58,11 @@ height: auto !important;
         <thead>
             <tr>
             <th scope="col">#</th>
-
-            <th scope="col">Telefono</th>
+            <th scope="col">Detalle</th>
             <th scope="col">Nombre</th>
             <th scope="col">Email</th>
-            <th scope="col">Detalle</th>
+            <th scope="col">Telefono</th>
+            
             </tr>
         </thead>
         <tbody>
@@ -72,11 +72,10 @@ height: auto !important;
         ?>
             <tr>
             <th scope="row"><?php echo $value->ad_id; ?></th>
-
-            <td><?php echo $value->ad_contact_phone; ?></td>
+            <td><?php echo $value->ad_title; ?></td>
             <td><?php echo $value->ad_contact_name; ?></td>
             <td><?php echo $value->ad_contact_email; ?></td>
-            <td><?php echo $value->ad_title; ?></td>
+            <td><?php echo $value->ad_contact_phone; ?></td>
             
             </tr>
         <?php 
