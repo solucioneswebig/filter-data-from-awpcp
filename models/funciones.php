@@ -13,7 +13,7 @@ function wpdocs_register_my_custom_menu_page() {
         __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
         __( 'GESTIONAR DATOS AWPCP', 'ges_awpcp' ),
         'manage_options',
-        'cargar_page_dashboard',
+        'cargar-page-dashboard',
         'admin_menu_gestion_awpcp',
         'dashicons-camera',
         6
