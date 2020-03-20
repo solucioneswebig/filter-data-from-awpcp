@@ -103,46 +103,6 @@ add_action('admin_head', 'design_styles');
 
 
 
-//Devolver datos a archivo js
-add_action('wp_ajax_nopriv_ajax_busqueda','busqueda_ajax');
-add_action('wp_ajax_ajax_busqueda','busqueda_ajax');
-
-function busqueda_ajax(){
-  include "ajax/busqueda.ajax.php";
-}
-
-
-add_action( 'wp_ajax_nopriv_submit_dropzonejs', 'dropzonejs_upload' ); //allow on front-end
-add_action( 'wp_ajax_submit_dropzonejs', 'dropzonejs_upload' );
-
-function dropzonejs_upload() {
-	include "ajax/subirDocumentos.ajax.php";
-}
-
-?>
-
-<script>
-(function($) {
-    $(document).ready(function() {
-
-
-        if($(window).width() < 768){
-        $('.table').DataTable( {
-           responsive: true
-        } );            
-        }else{
-         $('.table').DataTable();                  
-        }
-
-
-    });
-})(jQuery);
-
-</script>
-
-<?php
-
-
 /*Incluimos la carpeta de models*/
 
 include GN_PLUGIN_DIR_PATH . "models/index.php";
