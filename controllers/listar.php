@@ -5,7 +5,15 @@ global $wpdb;
 $obtener_datos = $wpdb->get_results("SELECT * FROM wp_awpcp_ads where ad_category_id = ".$_GET['id_mostrar']."");
 $categoria = $wpdb->get_row("SELECT * FROM wp_awpcp_categories where category_name = ".$_GET['id_mostrar']."");
 ?>
+<style>
+.wp-admin select {
 
+padding: 2px;
+line-height: auto !important;
+height: auto !important;
+
+}
+</style>
 
 <div class="container">
 
