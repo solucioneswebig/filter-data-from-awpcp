@@ -6,7 +6,9 @@ global $wpdb;
 ?>
 
 
-<form action="admin.php?page=gestionar-datos-awpcp">
+<form action="admin.php">
+
+<input type="hidden" name="page" value="gestionar-datos-awpcp">
 
 <select name="id_mostrar" id="">
 <?php 
